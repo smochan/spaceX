@@ -39,8 +39,7 @@ CSS is the language we use to style an HTML document. CSS describes how HTML ele
 
 - In index.js there is two main function getText() and renderFlight().
     - In getText(), fetch method is used to make a get request from the api and then the data received from that request is converted to a json object.
-    - In renderFlight(), full URL is created by combining three query flight_year, launch_succes and, landing_succes. Next we call getText() function by providing full url as a argument to fetch the required data. Then we used the data we got to store it in html string one by using forEach loop.
+    - In renderFlight(), full URL is created by combining three query flight_year, launch_succes and, landing_succes. Next we call getText() function by providing full url as a argument to fetch the required data. Then we used the data we got to store it in html string one by one using forEach loop and change the inner html of missions.
 - In index.js file, whenever a button(year or launch/landing succes) is pressed a event is triggered and it checks if the button pressed was already pressed or not.
-    - If it was already pressed then it removes that query from url and make get request with modified url and then renders the missions using renderFlight() function.
-    - Otherwise it adds the query in the url corresponding to the button pressed and make get request with modified url and then renders the missions using renderFlight() function.
-    
+    - If it was already pressed then it removes that query from the url and make a get request with modified url and then renders the missions using renderFlight() function.
+    - Otherwise it adds the query in the url corresponding to the button pressed and make a get request with modified url and then renders the missions using renderFlight() function.
