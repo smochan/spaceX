@@ -43,3 +43,4 @@ CSS is the language we use to style an HTML document. CSS describes how HTML ele
 - In index.js file, whenever a button(year or launch/landing succes) is pressed a event is triggered and it checks if the button pressed was already pressed or not.
     - If it was already pressed then it removes that query from the url and make a get request with modified url and then renders the missions using renderFlight() function.
     - Otherwise it adds the query in the url corresponding to the button pressed and make a get request with modified url and then renders the missions using renderFlight() function.
+![alt text](https://github.com/smochan/spaceX/blob/main/images/lighthouseScore.png)
