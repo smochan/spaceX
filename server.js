@@ -1,6 +1,5 @@
 const express = require("express");
 const ejs = require("ejs");
-const https = require("https");
 const axios = require('axios');
 
 const app = express();
