@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <h1 class="title">SpaceX Launch Programs</h1>
+    <div class="mid">
+        <div class="filters">
+            <h2><strong>Filters</strong></h2>
+            <p>Launch Year</p>
+            <hr>
+            <div class="btn ly-btn">
+                <button type="submit" class="ly" id="2006">2006</button>
+                <button type="submit" class="ly" id="2007">2007</button>
+                <button type="submit" class="ly" id="2008">2008</button>
+                <button type="submit" class="ly" id="2009">2009</button>
+                <button type="submit" class="ly" id="2010">2010</button>
+                <button type="submit" class="ly" id="2011">2011</button>
+                <button type="submit" class="ly" id="2012">2012</button>
+                <button type="submit" class="ly" id="2013">2013</button>
+                <button type="submit" class="ly" id="2014">2014</button>
+                <button type="submit" class="ly" id="2015">2015</button>
+                <button type="submit" class="ly" id="2016">2016</button>
+                <button type="submit" class="ly" id="2017">2017</button>
+                <button type="submit" class="ly" id="2018">2018</button>
+                <button type="submit" class="ly" id="2019">2019</button>
+                <button type="submit" class="ly" id="2020">2020</button>
+            </div>
+            <p>Succesful Launch</p>
+            <hr>
+            <div class="btn">
+                <button type="submit" class="slch" id="truelch">True</button>
+                <button type="submit" class="slch" id="falselch">False</button>
+            </div>
+            
+            <p>Succesful Landing</p>
+            <hr>
+            <div class="btn">
+                <button type="submit" class="slng" id="true">True</button>
+                <button type="submit" class="slng" id="false">False</button>
+            </div>
+        </div>
+        <div class="missions">
+            <%for(var i=0; i<cards; i++){%>
+                <div class="flight">
+                    <img src="<%= missions[i].src %>" alt="Image">
+                    <p id="title"><%= missions[i].missionName %> #<span><%= missions[i].flightNumber %></span></p>
+                    <p><strong>Mission ids:</strong></p>
+                    <ul>
+                        <li><%= missions[i].missionId %></li>
+                    </ul>
+                    <p><strong>Launch Year:</strong>  <%= missions[i].launchYear %></p>
+                    <p><strong>Succesful Launch:</strong>  <%= missions[i].successfulLaunch %></p>
+                    <p><strong>landing Success:</strong>   <%= missions[i].landingSuccess %></p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <p class="dev"><strong>Developed By: </strong>Sankat Mochan</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

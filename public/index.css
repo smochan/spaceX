@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+    overflow-y: hidden;
+    background-color: rgb(189, 189, 189);
+}
+body h1{
+    margin-left: 2em;
+}
+hr{
+    width: 60%;
+    margin-top: 0.3em;
+    margin-bottom: 1.2em;
+}
+button{
+    background-color: rgb(182, 233, 128);
+    width: 6em;
+    height: 2.5rem;
+    border-radius: 10%;
+    justify-self: center;
+}
+img{
+    max-width: 200px;
+    align-self: center;
+}
+
+#title{
+    color: #0000FF;
+}
+
+.mid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+    margin: 1em;
+    max-height: 87vh;
+}
+.filters{
+    grid-column: 1/ 2;
+    background-color: #FFFFFF;
+    padding: 1em;
+    height: max-content;
+}
+.filters h2{
+    margin-top: 0;
+}
+.filters p{
+    text-align: center;
+    margin-bottom: 0;
+}
+.btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0.5rem;
+}
+.missions{
+    grid-column: 2/ 6;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    overflow-y: scroll;
+    max-height: 87vh;
+}
+.flight{
+    background-color: rgb(255,255,255);
+    max-height: 45vh;
+    overflow-y: scroll;
+    overflow-x: none;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+.flight p{
+    margin: 0.4em;
+}
+.flight ul{
+    margin: 0;
+}
+.clicked{
+    background-color: rgb(115, 160, 68);
+}
+.dev{
+    align-self: center;
+    text-align: center;
+}
+
+@media (max-width: 1275px){
+    img{
+        max-width: 130px;
+    }
+}
+@media (max-width: 1024px){
+    img{
+        max-width: 200px;
+    }
+    .mid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .missions{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+@media (max-width: 700px){
+    img{
+        max-width: 200px;
+    }
+    .mid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .missions{
+        grid-template-columns: 1fr;
+    }
+}
